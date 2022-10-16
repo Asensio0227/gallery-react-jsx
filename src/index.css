@@ -1,0 +1,351 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* primary */
+  --clr-primary-1: hsl(205, 87%, 17%);
+  --clr-primary-2: hsl(205, 81%, 23%);
+  --clr-primary-3: hsl(205, 85%, 25%);
+  --clr-primary-4: hsl(205, 87%, 27%);
+  /* light primary */
+  --clr-primary-5: hsl(205, 95%, 55%);
+  --clr-primary-6: hsl(205, 75%, 65%);
+  --clr-primary-7: hsl(205, 85%, 67%);
+  --clr-primary-8: hsl(205, 79%, 71%);
+  --clr-primary-9: hsl(205, 65%, 65%);
+  --clr-primary-10: hsl(205, 95%, 75%);
+  /* grey */
+  --clr-grey-1: hsl(209, 61%, 16%); 
+  --clr-grey-2: hsl(209, 23%, 31%); 
+  --clr-grey-3: hsl(209, 27%, 35%); 
+  --clr-grey-4: hsl(211, 33%, 39%); 
+  /* light grey */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(210, 29%, 57%);
+  --clr-grey-7: hsl(210, 25%, 64%);
+  --clr-grey-8: hsl(210, 34%, 72%);
+  --clr-grey-9: hsl(212, 36%, 84%);
+  --clr-grey-10: hsl(210, 33%, 94%);
+  /* secondary */
+  --clr-secondary-1: hsl(181, 100%,19%);
+  --clr-secondary-2: hsl(181, 85%,21%);
+  --clr-secondary-3: hsl(182, 71%,22%);
+  --clr-secondary-4: hsl(185, 95%,25%);
+  /* light secondary */
+  --clr-secondary-5: #28cab2;
+  --clr-secondary-6: hsl(182, 85%,65%);
+  --clr-secondary-6: hsl(181, 81%,69%);
+  --clr-secondary-6: hsl(185, 71%,69%);
+  --clr-secondary-6: hsl(183, 80%,75%);
+  --clr-secondary-6: hsl(181, 68%,70%);
+  /* other */
+  --clr-dark-red: hsl(360, 67%, 44%);
+  --clr-light-red: hsl(360, 44%, 67%);
+  --clr-dark-green: hsl(125, 67%, 44%);
+  --clr-light-green: hsl(125, 44%, 67%);
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-gold: #c59d5c;
+  --clr-pink: #f28cab;
+  --clr-dodger: #4eacdc;
+  --clr-lime: #f65d5c;
+  --radius: .5rem;
+  --spacing: .2rem;
+  --transition: all .3s linear;
+  --ff-primary: 'Roboto sans',sans-serif;
+  --ff-secondary: 'Open Sans',sans-serif;
+  --small-Text: .875rem;
+  --extra-SmallText: .75rem;
+  --fixed-width: 620px;
+  --max-width: 1170px;
+  --shadow-1: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.6); 
+  --shadow-2: 0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.6); 
+  --shadow-3: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -3px rgba(0,0,0,0.05); 
+  --shadow-4: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04); 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:disabled{
+  cursor: not-allowed;
+}
+body {
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  letter-spacing: var(--spacing);
+  line-height:1.7;
+  font-family: var(--ff-secondary);
+  font-weight: 400;
+  font-size: var(--small-Text);
+}
+ul,
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+  line-height: 1.5;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  margin-bottom: .75rem;
+} 
+h1 {
+  margin-top: 0;
+  font-size: 3.053rem;
+}
+h2 {
+  font-size: 2.0993rem;
+}
+h3 {
+  font-size: 2.052rem;
+}
+h4 {
+  font-size: 1.0995rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.75rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.75rem;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 1.25rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 1;
+  }
+}
+
+/* 
+=============
+GLOBAL STYLES
+=============
+*/
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: .6;
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes humburger_puls {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: .6;
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+==============
+GLOBAL CLASSES
+==============
+*/
+
+.section {
+  width: 90vw;
+  max-width: var(--max-width);
+  display: grid;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5rem 0;
+  gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .prev-btn {
+    left: -2.5rem;
+  }
+  .next-btn {
+    right: -2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .prev-btn {
+    left: -4.5rem;
+  }
+  .next-btn {
+    right: -4.5rem;
+  }
+}
+main {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 
+========
+GALLERY
+=======
+*/
+.full-page {
+  min-height: 100vh;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-2);
+  height: 15rem;
+}
+.img:hover {
+  box-shadow: var(--shadow-4);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  min-height: 100vh;
+  overflow: scroll;
+  transition: var(--transition);
+  background: rgb(0,0,0);
+}
+.modal.open {
+  opacity: 1;
+  z-index: 999;
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--clr-white);
+  background: transparent;
+  transition: var(--transition);
+  font-size: 2rem;
+  border-color: transparent;
+  cursor: pointer;
+}
+.close-btn:hover {
+  opacity: .6;
+}
+.modal-content{
+  width: 80%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  margin-top: 10rem;
+} 
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.5rem;
+  color: var(--clr-white);
+  transition: var(--transition);
+  cursor: pointer;
+  opacity: .6;
+}
+.prev-btn {
+  left: -2rem;
+}
+.next-btn{
+  right: -2rem;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  opacity: 1;
+}
+.main-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  height: 15rem;
+}
+.image-name {
+  text-align: center;
+  margin: 1rem 0 3rem;
+  color: var(--clr-white);
+}
+.modal-images{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+.modal-img{
+  width: 100%;
+  height: 5rem;
+  object-fit: cover;
+  opacity: .5;
+  transition: var(--transition);
+}
+.modal-img:hover {
+  opacity: 1;
+}
+.modal-img.selected {
+  opacity: .8;
+}
